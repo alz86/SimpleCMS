@@ -1,0 +1,111 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {}
+    }
+  },
+  "packages": {
+    "DecisionTree.Plugins.SimpleCMS.Domain.Shared": {
+      "path": "src/DecisionTree.Plugins.SimpleCMS.Domain.Shared/DecisionTree.Plugins.SimpleCMS.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "DecisionTree.Plugins.SimpleCMS.Domain": {
+      "path": "src/DecisionTree.Plugins.SimpleCMS.Domain/DecisionTree.Plugins.SimpleCMS.Domain.abppkg",
+      "folder": "src"
+    },
+    "DecisionTree.Plugins.SimpleCMS.Application.Contracts": {
+      "path": "src/DecisionTree.Plugins.SimpleCMS.Application.Contracts/DecisionTree.Plugins.SimpleCMS.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "DecisionTree.Plugins.SimpleCMS.Application": {
+      "path": "src/DecisionTree.Plugins.SimpleCMS.Application/DecisionTree.Plugins.SimpleCMS.Application.abppkg",
+      "folder": "src"
+    },
+    "DecisionTree.Plugins.SimpleCMS.EntityFrameworkCore": {
+      "path": "src/DecisionTree.Plugins.SimpleCMS.EntityFrameworkCore/DecisionTree.Plugins.SimpleCMS.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "DecisionTree.Plugins.SimpleCMS.MongoDB": {
+      "path": "src/DecisionTree.Plugins.SimpleCMS.MongoDB/DecisionTree.Plugins.SimpleCMS.MongoDB.abppkg",
+      "folder": "src"
+    },
+    "DecisionTree.Plugins.SimpleCMS.HttpApi": {
+      "path": "src/DecisionTree.Plugins.SimpleCMS.HttpApi/DecisionTree.Plugins.SimpleCMS.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "DecisionTree.Plugins.SimpleCMS.HttpApi.Client": {
+      "path": "src/DecisionTree.Plugins.SimpleCMS.HttpApi.Client/DecisionTree.Plugins.SimpleCMS.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "DecisionTree.Plugins.SimpleCMS.TestBase": {
+      "path": "test/DecisionTree.Plugins.SimpleCMS.TestBase/DecisionTree.Plugins.SimpleCMS.TestBase.abppkg",
+      "folder": "test"
+    },
+    "DecisionTree.Plugins.SimpleCMS.EntityFrameworkCore.Tests": {
+      "path": "test/DecisionTree.Plugins.SimpleCMS.EntityFrameworkCore.Tests/DecisionTree.Plugins.SimpleCMS.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "DecisionTree.Plugins.SimpleCMS.MongoDB.Tests": {
+      "path": "test/DecisionTree.Plugins.SimpleCMS.MongoDB.Tests/DecisionTree.Plugins.SimpleCMS.MongoDB.Tests.abppkg",
+      "folder": "test"
+    },
+    "DecisionTree.Plugins.SimpleCMS.Domain.Tests": {
+      "path": "test/DecisionTree.Plugins.SimpleCMS.Domain.Tests/DecisionTree.Plugins.SimpleCMS.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "DecisionTree.Plugins.SimpleCMS.Application.Tests": {
+      "path": "test/DecisionTree.Plugins.SimpleCMS.Application.Tests/DecisionTree.Plugins.SimpleCMS.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "DecisionTree.Plugins.SimpleCMS.HttpApi.Host": {
+      "path": "host/DecisionTree.Plugins.SimpleCMS.HttpApi.Host/DecisionTree.Plugins.SimpleCMS.HttpApi.Host.abppkg",
+      "folder": "host"
+    },
+    "DecisionTree.Plugins.SimpleCMS.Web": {
+      "path": "src/DecisionTree.Plugins.SimpleCMS.Web/DecisionTree.Plugins.SimpleCMS.Web.abppkg",
+      "folder": "src"
+    },
+    "DecisionTree.Plugins.SimpleCMS.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/DecisionTree.Plugins.SimpleCMS.HttpApi.Client.ConsoleTestApp/DecisionTree.Plugins.SimpleCMS.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "DecisionTree.Plugins.SimpleCMS.Web.Host": {
+      "path": "host/DecisionTree.Plugins.SimpleCMS.Web.Host/DecisionTree.Plugins.SimpleCMS.Web.Host.abppkg",
+      "folder": "host"
+    },
+    "DecisionTree.Plugins.SimpleCMS.AuthServer": {
+      "path": "host/DecisionTree.Plugins.SimpleCMS.AuthServer/DecisionTree.Plugins.SimpleCMS.AuthServer.abppkg",
+      "folder": "host"
+    },
+    "DecisionTree.Plugins.SimpleCMS.Host.Shared": {
+      "path": "host/DecisionTree.Plugins.SimpleCMS.Host.Shared/DecisionTree.Plugins.SimpleCMS.Host.Shared.abppkg",
+      "folder": "host"
+    },
+    "DecisionTree.Plugins.SimpleCMS.Web.Unified": {
+      "path": "host/DecisionTree.Plugins.SimpleCMS.Web.Unified/DecisionTree.Plugins.SimpleCMS.Web.Unified.abppkg",
+      "folder": "host"
+    },
+    "DecisionTree.Plugins.SimpleCMS.Blazor": {
+      "path": "src/DecisionTree.Plugins.SimpleCMS.Blazor/DecisionTree.Plugins.SimpleCMS.Blazor.abppkg",
+      "folder": "src"
+    },
+    "DecisionTree.Plugins.SimpleCMS.Blazor.Host": {
+      "path": "host/DecisionTree.Plugins.SimpleCMS.Blazor.Host/DecisionTree.Plugins.SimpleCMS.Blazor.Host.abppkg",
+      "folder": "host"
+    },
+    "DecisionTree.Plugins.SimpleCMS.Blazor.Server": {
+      "path": "src/DecisionTree.Plugins.SimpleCMS.Blazor.Server/DecisionTree.Plugins.SimpleCMS.Blazor.Server.abppkg",
+      "folder": "src"
+    },
+    "DecisionTree.Plugins.SimpleCMS.Blazor.WebAssembly": {
+      "path": "src/DecisionTree.Plugins.SimpleCMS.Blazor.WebAssembly/DecisionTree.Plugins.SimpleCMS.Blazor.WebAssembly.abppkg",
+      "folder": "src"
+    },
+    "DecisionTree.Plugins.SimpleCMS.Blazor.Server.Host": {
+      "path": "host/DecisionTree.Plugins.SimpleCMS.Blazor.Server.Host/DecisionTree.Plugins.SimpleCMS.Blazor.Server.Host.abppkg",
+      "folder": "host"
+    }
+  }
+}

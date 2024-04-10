@@ -1,0 +1,19 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "extends": "../../tsconfig.prod.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/lib",
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    "types": [],
+    "lib": ["dom", "es2018"],
+    "paths": {
+      "@decision-tree.Plugins/simple-cms": ["projects/simple-cms/src/public-api.ts"],
+      "@decision-tree.Plugins/simple-cms/config": ["projects/simple-cms/config/src/public-api.ts"],
+      "@proxy": ["projects/simple-cms/src/lib/proxy/index.ts"],
+      "@proxy/*": ["projects/simple-cms/src/lib/proxy/*"]
+    }
+  },
+  "exclude": ["src/test.ts", "**/*.spec.ts"]
+}

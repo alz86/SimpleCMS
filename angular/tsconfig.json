@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.prod.json",
+  "compilerOptions": {
+    "paths": {
+      "@decision-tree.Plugins/simple-cms": ["projects/simple-cms/src/public-api.ts"],
+      "@decision-tree.Plugins/simple-cms/config": ["projects/simple-cms/config/src/public-api.ts"],
+      "@proxy": ["projects/simple-cms/src/lib/proxy/index.ts"],
+      "@proxy/*": ["projects/simple-cms/src/lib/proxy/*"]
+    }
+  }
+}

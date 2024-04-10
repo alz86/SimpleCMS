@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>DecisionTree.Plugins.SimpleCMS</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DecisionTree.Plugins.SimpleCMS.Application\DecisionTree.Plugins.SimpleCMS.Application.csproj" />
+    <ProjectReference Include="..\DecisionTree.Plugins.SimpleCMS.Domain.Tests\DecisionTree.Plugins.SimpleCMS.Domain.Tests.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+  </ItemGroup>
+
+</Project>

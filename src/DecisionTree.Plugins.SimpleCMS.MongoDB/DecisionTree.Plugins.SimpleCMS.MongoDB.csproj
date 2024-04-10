@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <RootNamespace>DecisionTree.Plugins.SimpleCMS</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.MongoDB" Version="8.0.5" />
+    <ProjectReference Include="..\DecisionTree.Plugins.SimpleCMS.Domain\DecisionTree.Plugins.SimpleCMS.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

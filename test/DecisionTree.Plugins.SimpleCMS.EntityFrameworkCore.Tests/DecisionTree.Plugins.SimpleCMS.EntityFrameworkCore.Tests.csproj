@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>DecisionTree.Plugins.SimpleCMS</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.0" />
+    <ProjectReference Include="..\..\src\DecisionTree.Plugins.SimpleCMS.EntityFrameworkCore\DecisionTree.Plugins.SimpleCMS.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\DecisionTree.Plugins.SimpleCMS.Application.Tests\DecisionTree.Plugins.SimpleCMS.Application.Tests.csproj" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="8.0.5" />
+
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>DecisionTree.Plugins.SimpleCMS</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="8.0.5" />
+    <ProjectReference Include="..\DecisionTree.Plugins.SimpleCMS.Application.Contracts\DecisionTree.Plugins.SimpleCMS.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

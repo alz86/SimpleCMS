@@ -1,0 +1,21 @@
+﻿@page "/SimpleCMS/Pages/{id}"
+@model DecisionTree.Plugins.SimpleCMS.Pages.SimpleCMS.PagesModel
+@{
+}
+<div class="row">
+    <div class="col-12 col-md-8 col-lg-8 mx-auto">
+        <section class="hero-section">
+            <div class="hero-articles">
+                <div class="hero-content">
+                    <h1 class="mb-3" id="PostTitle">@Model.ContentEntryInfo.Title</h1>
+                </div>
+            </div>
+        </section>
+        <section class="post-content">
+            <p>
+                @Html.Raw(Model.ContentEntryInfo.Content)
+            </p>
+        </section>
+
+    </div>
+</div>

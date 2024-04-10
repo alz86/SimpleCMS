@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "DecisionTree.Plugins.SimpleCMS": {
+      "path": "DecisionTree.Plugins.SimpleCMS.abpmdl"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+﻿@page
+@using DecisionTree.Plugins.SimpleCMS.Localization
+@using DecisionTree.Plugins.SimpleCMS.Pages.SimpleCMS
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@using Volo.Abp.AspNetCore.Mvc.UI.Packages.TuiEditor
+@using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Pages.Shared.Components.AbpPageToolbar
+
+@model DecisionTree.Plugins.SimpleCMS.Pages.SimpleCMS.IndexModel
+@inject IHtmlLocalizer<SimpleCMSResource> L
+@inject IAuthorizationService Authorization
+@{
+}
+@inject IPageLayout PageLayout
+@{
+    PageLayout.Content.Title = L["SimpleCMS:Pages:Manage"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["SimpleCMS:Name"].Value);
+    PageLayout.Content.MenuItemName = L["SimpleCMS:Pages:Manage"].Value;
+}
+@section styles {
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+}
+@section scripts {
+    <abp-script-bundle name="@typeof(IndexModel).FullName">
+        <abp-script src="/Pages/SimpleCMS/index.js" />
+    </abp-script-bundle>
+}
+@section content_toolbar {
+    @await Component.InvokeAsync(typeof(AbpPageToolbarViewComponent), new { pageName = typeof(IndexModel).FullName })
+}
+<abp-card>
+    <abp-card-header>
+        <abp-row>
+            <abp-column size-md="_6">
+                <abp-card-title>@L["SimpleCMS:Pages:Name"]</abp-card-title>
+            </abp-column>
+            <abp-column size-md="_6" class="text-end">
+                <abp-button id="NewEntryButton"
+                            text="@L["SimpleCMS:Pages:Create"].Value"
+                            icon="plus"
+                            button-type="Primary" />
+            </abp-column>
+        </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" id="EntriesTable"></abp-table>
+    </abp-card-body>
+</abp-card>
+
+@*
+    Toast UI script has to be added after the page's body.
+    See: https://github.com/nhn/tui.editor/issues/882
+*@
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>

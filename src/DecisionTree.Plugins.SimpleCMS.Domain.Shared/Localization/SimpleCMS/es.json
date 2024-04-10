@@ -1,0 +1,19 @@
+{
+  "culture": "es",
+  "texts": {
+    "SimpleCMS:Permissions:GroupName": "SimpleCMS",
+    "SimpleCMS:Permissions:Edit": "Crear/editar entradas",
+
+    "SimpleCMS:Name": "SimpleCMS",
+    "SimpleCMS:Pages:Name": "Paginas",
+    "SimpleCMS:Pages:Create": "Crear nueva pagina",
+    "SimpleCMS:Pages:Manage": "Admnistrar entradas",
+
+    "SimpleCMS:Pages:Actions": "Acciones",
+    "SimpleCMS:Pages:Edit": "Editar",
+
+    "SimpleCMS:Fields:Name": "Nombre",
+    "SimpleCMS:Fields:Title": "Titulo",
+    "SimpleCMS:Fields:Content": "Contenido"
+  }
+}
