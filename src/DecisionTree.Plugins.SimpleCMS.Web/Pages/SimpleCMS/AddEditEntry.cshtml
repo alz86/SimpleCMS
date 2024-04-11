@@ -7,11 +7,6 @@
 @using Volo.Abp.AspNetCore.Mvc.UI.Packages.TuiEditor
 @model DecisionTree.Plugins.SimpleCMS.Pages.SimpleCMS.AddEditEntryModel
 @inject IHtmlLocalizer<SimpleCMSResource> L
-@section scripts {
-    @* <abp-script-bundle name="@typeof(IndexModel).FullName">
-        <abp-script src="/Pages/SimpleCMS/AddEditEntry.js" />
-    </abp-script-bundle>
- *@}
 @{
     Layout = null;
 }
@@ -37,41 +32,3 @@
         <abp-modal-footer buttons="@(AbpModalButtons.Cancel|AbpModalButtons.Save)"></abp-modal-footer>
     </abp-modal>
 </form>
-<script>
-    $(function () {
-        var $container = $('#new-entry-container');
-        var $form = $('#new-entry-form');
-        var $editorContainer = $container.find('.new-entry-editor');
-        var $submitButton = $form.find('button[type=submit]');
-        var $postTextInput = $form.find("input[name='ContentEntryInfo.Content']");
-
-        var newPostEditor = new toastui.Editor({
-            el: $editorContainer[0],
-            usageStatistics: false,
-            initialEditType: 'wysiwyg',
-            height: 'auto',
-            initialValue: $postTextInput.val(),
-            hideModeSwitch: true,
-        });
-
-        $form.submit(function (e) {
-
-            var postText = newPostEditor.getHTML();
-            $postTextInput.val(postText);
-
-            if (!$form.valid()) {
-                var validationResult = $form.validate();
-                abp.message.warn(validationResult.errorList[0].message);
-                e.preventDefault();
-                return false; //for old browsers
-            }
-
-            $submitButton.buttonBusy();
-            $(this).off('submit').submit();
-
-            return true;
-
-        });
-    });
-
-</script>

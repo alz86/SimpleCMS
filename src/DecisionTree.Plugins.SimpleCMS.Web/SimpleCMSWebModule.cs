@@ -57,7 +57,7 @@ public class SimpleCMSWebModule : AbpModule
         Configure<RazorPagesOptions>(options =>
         {
             options.Conventions.AuthorizePage("/SimpleCMS/Index", SimpleCMSPermissions.EditContentPermission);
-            options.Conventions.AuthorizePage("/SimpleCMS/CreateModal", SimpleCMSPermissions.EditContentPermission);
+            options.Conventions.AuthorizePage("/SimpleCMS/AddEditEntry", SimpleCMSPermissions.EditContentPermission);
         });
     }
 }

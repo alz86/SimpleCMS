@@ -3,6 +3,40 @@ var simpleCMSAppService = decisionTree.plugins.simpleCMS.controllers.contentEntr
 
 $(function () {
 
+    //Modal init code
+    abp.modals.AddEditEntry = function () {
+        function initModal(modalManager, args) {
+
+            var $form = modalManager.getForm();
+            var $postTextInput = $form.find("input[name='ContentEntryInfo.Content']");
+
+            var newPostEditor = new toastui.Editor({
+                el: $form.find('.new-entry-editor')[0],
+                usageStatistics: false,
+                initialEditType: 'wysiwyg',
+                height: 'auto',
+                initialValue: $postTextInput.val(),
+                hideModeSwitch: true,
+            });
+
+            newPostEditor.on('blur', function () {
+                var postText = newPostEditor.getHTML();
+                $postTextInput.val(postText);
+            });
+        };
+
+        return {
+            initModal: initModal
+        };
+    };
+
+    //modal
+    var createEditModal = new abp.ModalManager({
+        viewUrl: abp.appPath + 'SimpleCMS/AddEditEntry',
+        modalClass: 'AddEditEntry'
+    });
+
+    //datable
     _dataTable = $('#EntriesTable').DataTable(
         abp.libs.datatables.normalizeConfiguration({
             order: [[1, 'asc']],
@@ -22,10 +56,7 @@ $(function () {
                             {
                                 text: l('SimpleCMS:Pages:Edit'),
                                 action: function (data) {
-                                    var _editModal = new abp.ModalManager({
-                                        viewUrl: abp.appPath + 'SimpleCMS/AddEditEntry',
-                                    });
-                                    _editModal.open({ id: data.record.id })
+                                    createEditModal.open({ id: data.record.id })
                                 }
                             }
                         ]
@@ -43,11 +74,12 @@ $(function () {
         })
     );
 
+    createEditModal.onResult(function () {
+        _dataTable.ajax.reloadEx();
+    });
+
     $('#NewEntryButton').click(function (e) {
         e.preventDefault();
-        var _createModal = new abp.ModalManager({
-            viewUrl: abp.appPath + 'SimpleCMS/AddEditEntry',
-        });
-        _createModal.open();
+        createEditModal.open();
     });
 });

@@ -1,8 +1,6 @@
 using DecisionTree.Plugins.SimpleCMS.Dto;
-using DecisionTree.Plugins.SimpleCMS.Permissions;
 using DecisionTree.Plugins.SimpleCMS.Services;
 using DecisionTree.Plugins.SimpleCMS.Web;
-using DecisionTree.Plugins.SimpleCMS.Web.Menus;
 using DecisionTree.Plugins.SimpleCMS.Web.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -29,11 +27,6 @@ namespace DecisionTree.Plugins.SimpleCMS.Pages.SimpleCMS
 
         public virtual async Task<ActionResult> OnGetAsync(Guid? id)
         {
-            if (!await _authorization.IsGrantedAsync(SimpleCMSPermissions.EditContentPermission))
-            {
-                return Redirect("/");
-            }
-
             if (id != null)
             {
                 var entry = await _contentEntryAppService.GetAsync(id.Value);
@@ -49,11 +42,10 @@ namespace DecisionTree.Plugins.SimpleCMS.Pages.SimpleCMS
 
             var input = ObjectMapper.Map<ContentEntryViewModel, CreateUpdateContentEntryDto>(ContentEntryInfo!);
 
-            //TODO: refactor
             var isCreating = ContentEntryInfo!.Id == null;
             await (isCreating ? _contentEntryAppService.CreateAsync(input) : _contentEntryAppService.UpdateAsync(ContentEntryInfo.Id!.Value, input));
 
-            return Redirect($"/{SimpleCMSMenus.PagesRoute}/");
+            return NoContent();
         }
     }
 }
