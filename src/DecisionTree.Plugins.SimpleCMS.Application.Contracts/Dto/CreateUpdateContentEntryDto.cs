@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DecisionTree.Plugins.SimpleCMS.Dto.Attributes;
+using System;
 using System.ComponentModel.DataAnnotations;
 using Volo.Abp.Application.Dtos;
 
@@ -15,6 +16,7 @@ namespace DecisionTree.Plugins.SimpleCMS.Dto
         public string Title { get; set; } = string.Empty;
 
         [Required]
+        [HtmlContentRequiredValidation]
         [StringLength(SimpleCMSConsts.FieldsConfiguration.ContentMaxLength)]
         public string Content { get; set; } = string.Empty;
     }

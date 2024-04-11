@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DecisionTree.Plugins.SimpleCMS.Dto.Attributes;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.ComponentModel.DataAnnotations;
 using Volo.Abp.ObjectExtending;
@@ -18,8 +19,8 @@ public class ContentEntryViewModel : ExtensibleObject
     [StringLength(SimpleCMSConsts.FieldsConfiguration.TitleMaxLength)]
     public string Title { get; set; } = string.Empty;
 
-    [Required]
     [StringLength(SimpleCMSConsts.FieldsConfiguration.ContentMaxLength)]
+    [HtmlContentRequiredValidation]
     [HiddenInput]
     public string Content { get; set; } = string.Empty;
 }
